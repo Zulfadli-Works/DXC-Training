@@ -1,7 +1,7 @@
 //Game.java
 //07/07/2021
 //Wednesday
-//
+
 
 
 import java.util.Scanner; //packages
@@ -16,6 +16,7 @@ class Guesser
 		return gnum;
 	}
 }
+
 class Player
 {
 	int guessNum()
@@ -53,44 +54,45 @@ class Referee
 
 	void checkNum()
 	{
+		//if all players guessed right
 		if (numFromPlayer1 == numFromGuesser && numFromPlayer2 == numFromGuesser && numFromPlayer3 == numFromGuesser)
 		{
 			System.out.println("All players is the winner");
 		}
-		
+		//if player 1 & 2 guess right
 		else if (numFromPlayer1 == numFromGuesser && numFromPlayer2 == numFromGuesser)
 		{
 			System.out.println("Player 1 & 2 are the winner");
 		}
-		
+		//if player 1 & 3 guessed right
 		else if (numFromPlayer1 == numFromGuesser && numFromPlayer3 == numFromGuesser)
 		{
 			System.out.println("Player 1 & 3 the winner");
 		}
-		
+		//if player 2 & 3 guessed right
 		else if (numFromPlayer2 == numFromGuesser && numFromPlayer3 == numFromGuesser)
 		{
 			System.out.println("Player 2 & 3 is the winner");
 		}
-		
+		//if player 1 guessed right
 		else if (numFromPlayer1 == numFromGuesser)
 		{
 			System.out.println("Player 1 is the winner");
 		}
-		
+		//if player 2 guessed right
 		else if (numFromPlayer2 == numFromGuesser)
 		{
 			System.out.println("Player 2 is the winner");
 		}	
-		
+		//if player 3 guessed right
 		else if (numFromPlayer3 == numFromGuesser)
 		{
 			System.out.println("Player 3 is the winner");
 		}
-		
+		//if none of the  players guessed it right
 		else
 		{
-			System.out.println("Game Ended");
+			System.out.println("Nobody guessed it right");
 		}	
 	}
 }
