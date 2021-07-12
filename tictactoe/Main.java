@@ -21,7 +21,7 @@ class Player{
 		
 		while (trueEndGame == false) //while the game has not ended, continue asking for input
 		{
-			System.out.println("Board placement: Please pick spaces between 1-9");
+			System.out.println("Board placement: Please pick spaces between 1 to 9");
 			System.out.println(" 1 | 2 | 3\n---+---+---\n 4 | 5 | 6\n---+---+---\n 7 | 8 | 9\n"); //Displays the board placement from 1-9 for easy readability.
 			
 			if (playerNum == 1) { //if it's a player ask for input			
@@ -146,6 +146,7 @@ class Player{
 	//Display what is currently on the board
 	void showBoard()
 	{
+		System.out.println("Current pieces on the board");
 		int counter = 0; //count the number if empty spaces on the board
 		for (int i=0; i<table.length; i++)
 		{
