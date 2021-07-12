@@ -3,7 +3,6 @@
 //Wednesday
 //
 
-package practice;
 
 import java.util.Scanner; //packages
 
@@ -97,7 +96,7 @@ class Referee
 }
 
 
-class Game
+public class Game
 {
 	public static void main(String[] args)
 	{
