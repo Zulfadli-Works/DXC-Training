@@ -147,9 +147,9 @@ class Player{
 	{
 		System.out.println("Current pieces on the board");
 		int counter = 0; //count the number if empty spaces on the board
-		for (int i=0; i<table.length; i++)
+		for (int i=0; i<table.length; i++) //height //no.of rows
 		{
-			for (int k=0; k<table.length; k++)
+			for (int k=0; k<table[0].length; k++) //width //no. of column
 			{
 				if (k == 0)
 				{
