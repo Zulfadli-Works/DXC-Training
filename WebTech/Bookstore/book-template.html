@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 1</title>
+    <style>
+        marquee{
+            font-size: 30px;
+            color:magenta;
+        }
+        body{
+            background-color: burlywood;
+        }
+                
+        #Website_name{
+            text-align: center;
+            font-size: 50px;
+            background-color: cornflowerblue;
+        }
+
+        #Icon{
+            width:20%;
+            height:20%;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2{
+            text-align: center;
+            border:5px solid red;
+            border-radius: 25px;
+            position: relative;
+            background-color: white;
+            /* max-width: 30%; */
+            /* opacity: 0.9; */
+        }
+
+        /* img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        } */
+
+        #Book_name{
+            text-align: center;
+            font-size: 50px;         
+        }
+
+        #book{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p{
+            text-align: center;
+        }
+        
+        button{
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.nav-bar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        li.nav-bar{
+            display: inline;
+            text-align: center;
+        }
+
+        .container {
+            height: 200px;
+            position: relative;
+            border: 3px solid green;
+        }
+
+        .centerButton {
+            margin: 0;
+            position: absolute;
+            /* top: 50%; */
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+
+
+        /* Default setting for links */
+        a:link{
+            color: green;
+            text-decoration: none;
+        }
+        /* Links visited will have these settings */
+        a:visited {
+            color: indigo;
+            text-decoration: none;
+            background-color: transparent;
+        }
+        /* Mouse hovers over the link and it changes colour */
+        a:hover {
+            background-color: transparent;
+            color: red;
+            text-decoration: underline;
+        }
+        /* Active means while the link is being clicked on(Press and hold) */
+        a:active{
+            color: blue;
+            background-color: transparent;
+            text-decoration: underline;
+        }    
+    </style>
+</head>
+<body>
+    <a href="index.html"><img id="Icon" src="Amozan-logo.png"></a>
+    <h1 id="Website_name">Amozan<sup>®</sup> - Fiction</h1>
+    <ul class="nav-bar">
+        <li class="nav-bar"><a href="fiction.html" <abbr title="Imaginary events and people">Fiction</abbr></a></li>&nbsp&nbsp
+        <li class="nav-bar"><a href="non-fiction.html" <abbr title="Factual rather than fictional">Non-Fiction</abbr></a></li>&nbsp&nbsp
+        <li class="nav-bar"><a href="fantasy.html" <abbr title="Imagining impossible or improbable things">Fantasy</abbr></a></li>&nbsp&nbsp
+        <!-- <li><a href="#about" <abbr title="Fiction">About</abbr></a></li> -->
+    </ul>
+
+
+    <h2 id="Book_name">Book Name</h1>
+    <a><img id="book" src="Amozan-logo.png"></a>
+    <p>Author's Name: <Strong></Strong></p>
+    <p>Book's Synopsis: </p>
+    <p>Book's price: <Strong></Strong></p>
+    <!-- <div class="container"> -->
+        <div class="centerButton">
+            <button>Add to cart</button>
+        </div>
+    <!-- </div>  -->
+
+    <br>
+    <hr>
+    <br>
+
+    <ul>
+        <li>Review
+            <ul>
+                <li>
+                    <q></q><strong></strong>
+                </li>
+                <li><q></q><strong></strong>
+                </li>
+                <li><q></q><strong></strong>
+                </li>
+            </ul>
+        </li>
+        <li>About the author
+            <ul>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    
+    <pre>
+        Contact us by:
+        Phone number: 65129807
+        Email: Amozan@gmail.com
+    </pre>
+        
+    <address>
+                Location: Sembawang Street 66 block 2A<br>
+                <!-- Operating hours: <del>10am-6pm</del>10am-5pm -->
+    </address>
+</body>
+</html>
