@@ -1,0 +1,118 @@
+marquee{
+    font-size: 30px;
+    color:red;
+}
+body{
+    background-color:rosybrown;
+}
+
+#Website_name{
+    text-align: center;
+    font-size: 50px;
+}
+
+#Icon{
+    width:20%;
+    height:20%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
+
+h2{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    border:5px solid red;
+    border-radius: 25px;
+    position: relative;
+    background-color: white;
+    /* max-width: 30%; */
+    /* opacity: 0.9; */
+}
+
+a.link {
+    text-align: center;
+}
+
+ul.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li.nav-bar{
+    display: inline;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.center-links{
+    text-align: center;
+    display: block;
+}
+
+/* img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+
+
+
+/* Default setting for links */
+a:link{
+    color: green;
+    text-decoration: none;
+}
+/* Links visited will have these settings */
+a:visited {
+    color: indigo;
+    text-decoration: none;
+    background-color: transparent;
+}
+/* Mouse hovers over the link and it changes colour */
+a:hover {
+    background-color: transparent;
+    color: red;
+    text-decoration: underline;
+}
+/* Active means while the link is being clicked on(Press and hold) */
+a:active{
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+
+h2.solid{
+    border-style: solid;
+    border-top-style: dotted;
+    /* Top & bottom, right & left */
+    border-width: 3px 7px;
+    /* Top & bottom, right & left */
+    border-color: lightblue lawngreen;
+}
+
+a.solid{
+    border-style: solid;
+    /* border-top-style: dotted;
+    border-bottom-style: dotted; */
+    /* Top & bottom, right & left */
+    border-width: 4px 4px;
+    /* Top & bottom, right & left */
+    border-color: lightblue lawngreen;
+    border-radius: 10px;
+}
+
