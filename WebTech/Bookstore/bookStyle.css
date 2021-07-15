@@ -24,9 +24,6 @@ body{
     /* width: 50%; */
 }
 
-h2{
-    text-align: center;
-}
 
 h2{
     text-align: center;
@@ -109,6 +106,59 @@ a:active{
 
 
 
+
+#Book_name{
+    text-align: center;
+    font-size: 30px;         
+}
+
+#book{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    text-align: center;
+}
+
+button{
+    justify-content: center;
+    align-items: center;
+}
+
+ul.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li.nav-bar{
+    display: inline;
+    text-align: center;
+}
+
+.container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+}
+
+.centerButton {
+    margin: 0;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
 h2.solid{
     /* Horizontal Vertical blurness colour */
     text-shadow: 2px 2px 5px rgb(172, 172, 172);
@@ -119,10 +169,6 @@ h2.solid{
     border-color: rgb(68, 122, 221) lawngreen;
 }
 
- a.solid{
-    
-
-}
 
 .linkss{
     font-weight: bold;
