@@ -1,6 +1,11 @@
 marquee{
     font-size: 30px;
     color:red;
+    background-color: skyblue;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    border-radius: 10px;
 }
 body{
     background-color:rosybrown;
@@ -14,7 +19,12 @@ body{
     text-shadow: 5px 2px 10px cyan;
 }
 
-#Icon{
+/* #logo{
+    background-color: white;
+    opacity: 0.8;
+} */
+
+a img{
     width:20%;
     height:20%;
 
@@ -22,10 +32,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     /* width: 50%; */
-}
-
-h2{
-    text-align: center;
 }
 
 h2{
@@ -71,12 +77,6 @@ li.nav-bar{
     display: block;
 }
 
-/* img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
 
 
 
@@ -119,10 +119,7 @@ h2.solid{
     border-color: rgb(68, 122, 221) lawngreen;
 }
 
- a.solid{
-    
 
-}
 
 .linkss{
     font-weight: bold;
@@ -138,3 +135,16 @@ h2.solid{
     border-radius: 30px;
 }
 
+iframe{
+    padding-left: 55px;
+}
+
+div#chat-box-div{
+    background-color: skyblue;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    /* height: 5%; */
+    padding: 3px;
+    border-radius: 7px;
+}

@@ -6,12 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply for a position</title>
     <style>
+        h1{
+            /* display: inline; */
+            padding-left: 45%;
+            border: 5px solid rgb(230, 181, 90);
+            border-radius: 25px;
+        }
         body{
             background-color: pink;
+        }
+        legend{
+            background-color: grey;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        fieldset{
+            width:280px;
+            background-color: grey;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        input:enabled{
+            background-color: blueviolet;
+        }
+
+        input:disabled{
+            background-color: black;
+        }
+
+        /* input:checked+span{
+            background-color: black;
+            color: white;
+        } */
+
+        input:focus{
+            color:brown;
+            background-color: yellowgreen;
+        }
+
+        /* Need to comment this out to see focus css */
+        input:required{
+            /* background-color: violet; */
+            background-color: lightgreen;
+        }
+
+        input:optional{
+            background-color:rgba(49, 236, 49, 0.479);
+        }
+
+        input[type="email"]:invalid{
+            color: red;
+            background-color: white;
+        }
+
+        input[type="password"]:valid{
+            color:green;
+            background-color: greenyellow;
         }
     </style>
 </head>
 <body>
+    <h1>Application</h1>
     <form action="index.html" target="_blank" method="POST" name="myForm" autocomplete="off">
         <fieldset>
             <legend>Basic Information</legend>
@@ -51,12 +108,13 @@
             <input type="date" name="dateCountry">
             <br><br>
 
-            <label for="newPassword">New Password: </label>
+            <label for="newPassword">New Password: </label><br>
             <input type="password" name="newPassword" id="newPassword" required>
+            <br>
+            <label for="newPassword">Password Confirmation: </label><br>
+            <input type="password" name="newPassword" id="newPassword" required>
+            <br>
 
-            <label for="newPassword">Password Confirmation: </label>
-            <input type="password" name="newPassword" id="newPassword" required>
-            
         </fieldset>
         <br><br>
 
@@ -100,11 +158,11 @@
             <br><br>
 
             <label>Enter a telephone number: </label>
-            <input type="tel" name="telephone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="65-8811-8811">
+            <input type="tel" name="telephone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="65-8811-8811" required>
             <br><br>
 
             <label>Upload your resume: </label>
-            <input type="file" name="myFile" multiple>
+            <input type="file" name="myFile" multiple required>
 
             
         </fieldset>

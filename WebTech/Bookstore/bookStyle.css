@@ -1,6 +1,11 @@
 marquee{
     font-size: 30px;
     color:red;
+    background-color: skyblue;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    border-radius: 10px;
 }
 body{
     background-color:rosybrown;
