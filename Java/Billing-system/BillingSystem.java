@@ -89,7 +89,7 @@ public class BillingSystem {
 	}
 	
 	
-	public static void details()
+	private static void details()
 	{
 		System.out.println("Please enter your Name: ");
 		String name = sc.nextLine();
@@ -97,7 +97,7 @@ public class BillingSystem {
 		String email = sc.nextLine();
 	}
 	//Displays the menu
-	public static void menu()
+	private static void menu()
 	{
 		System.out.println("--------------------Menu--------------------");
 		System.out.println("S/N		 Item Name 	       Price");
@@ -112,7 +112,7 @@ public class BillingSystem {
 	}
 	
 	//Ask user for their menu choice which includes the serial number and quantity of the item
-	public static void userChoice()
+	private static void userChoice()
 	{
 		System.out.println("Select the item's S/N of your choice, enter '0' to finish ordering: ");
 		serialNum = sc.nextInt();
@@ -129,7 +129,7 @@ public class BillingSystem {
 	}
 	
 	//compares the user input with the menu and add those items into purchase list
-	public static void addItems()
+	private static void addItems()
 	{
 		boolean finishShopping = true;
 		String name = null;
@@ -192,7 +192,7 @@ public class BillingSystem {
 	}
 	
 	//adds teh 6.75% tax
-	public static void addTax()
+	private static void addTax()
 	{
 		tax = ((total/100)*6.75);
 		totalAfterTax = total + tax;
@@ -200,7 +200,7 @@ public class BillingSystem {
 	}
 	
 	//displays the tax and total after adding tax
-	public static void displayTax()
+	private static void displayTax()
 	{
 		System.out.format("Tax Amount: $%.2f", tax);
 		System.out.println();
@@ -209,7 +209,7 @@ public class BillingSystem {
 	}
 	
 	//displays what items has been purchased
-	public static void itemsPurchased()
+	private static void itemsPurchased()
 	{
 		System.out.println();
 		System.out.println("Items Purchased");
@@ -234,7 +234,7 @@ public class BillingSystem {
 	}
 	
 	//adds minimum or higher user tip
-	public static void tipping()
+	private static void tipping()
 	{
 		boolean tipped = false;
 		
@@ -276,7 +276,7 @@ public class BillingSystem {
 	}
 	
 	//checks for higher tip
-	public static void newTips()
+	private static void newTips()
 	{
 		System.out.println("How much would you like to tip? ");
 		double  newTip = sc.nextDouble();
@@ -292,14 +292,14 @@ public class BillingSystem {
 	}
 	
 	//displays the 6.75% tip in $
-	public static void displayTips()
+	private static void displayTips()
 	{
 		System.out.format("You have tipped: $%.2f", tips);
 		System.out.println();
 	}
 	
 	//displays the Grand total
-	public static void grandTotal()
+	private static void grandTotal()
 	{
 		System.out.format("Grand Total: $%.2f", totalAfterTips);
 	}
