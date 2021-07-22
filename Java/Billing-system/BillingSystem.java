@@ -1,3 +1,4 @@
+package practice;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,9 +7,9 @@ import java.util.Scanner;
 class Receipt
 {
 	String name;
-	int quantity;
-	int subtotal;
-	int price;
+	private int quantity;
+	private int subtotal;
+	private int price;
 	
 	//constructor for items that have been purchased
 	Receipt(String name, int quantity, int price, int subtotal)
@@ -50,18 +51,18 @@ class Receipt
 public class BillingSystem {
 	
 	//Declaration
-	static int serialNum = 0;	//the item's serial number
-	static int quantity = 0;	//How many of said item the user wants to purchase
-	static double total = 0;	//subtotal of the current list of purchased items
-	static double tax = 0;		//will be used to store 6.75% of the total
-	static double totalAfterTax = 0;	//total + tax
-	static double tips = 0;				//minimum tips or user input tips if higher
-	static double totalAfterTips = 0; //grandTotal
+	private static int serialNum = 0;	//the item's serial number
+	private static int quantity = 0;	//How many of said item the user wants to purchase
+	private static double total = 0;	//subtotal of the current list of purchased items
+	private static double tax = 0;		//will be used to store 6.75% of the total
+	private static double totalAfterTax = 0;	//total + tax
+	private static double tips = 0;				//minimum tips or user input tips if higher
+	private static double totalAfterTips = 0; //grandTotal
 //	static String purchaseList[];
-	static ArrayList<Receipt> purchaseList =  new ArrayList<Receipt>();	//Used to store all the ordered items
+	private static ArrayList<Receipt> purchaseList =  new ArrayList<Receipt>();	//Used to store all the ordered items
 //	static int drinksPrice[] = {1, 2, 3};
 	
-	static Scanner sc =  new Scanner(System.in); //because this is used in multiple methods, we will declare here
+	private static Scanner sc =  new Scanner(System.in); //because this is used in multiple methods, we will declare here
 
 	
 	public static void main(String[] args) {
@@ -119,6 +120,11 @@ public class BillingSystem {
 		{
 			System.out.println("Enter quantity of item: ");
 			quantity = sc.nextInt();
+			if (quantity == 0)
+			{
+				System.out.println("You have given 0 quantity for the item, please redo your choice.");
+				userChoice();
+			}
 		}
 	}
 	
@@ -129,6 +135,7 @@ public class BillingSystem {
 		String name = null;
 		int subtotal = 0;
 		int price = 0;
+		
 		
 		while (finishShopping == true)
 		{
@@ -169,7 +176,7 @@ public class BillingSystem {
 		    	break;
 	
 		      default:
-		        System.out.println("Invalid option.");
+		        System.out.println("Please enter a number betwen 0 to 5: \n");
 		    }
 			if (finishShopping == true)
 			{
@@ -229,34 +236,42 @@ public class BillingSystem {
 	//adds minimum or higher user tip
 	public static void tipping()
 	{
-		tips = ((totalAfterTax/100)*10);	//Minimum tips
-		System.out.format("Current tip: $%.2f", tips);
-		System.out.println();
-		System.out.println("Would you like to tip more?");
-		System.out.println("Enter 'y' for Yes and 'n' for No: ");
+		boolean tipped = false;
 		
-		char  userInput = sc.next().charAt(0);
-
-		
-		switch(userInput)
+		while (tipped == false)
 		{
-			case 'Y':
-				newTips();
-				totalAfterTips = totalAfterTax + tips;	//stores tip
-		        break;
-			case 'y':
-				newTips();
-		      	totalAfterTips = totalAfterTax + tips;
-		        break;
-			case 'N':	
-				totalAfterTips = totalAfterTax + tips;
-		        break;
-			case 'n':
-				totalAfterTips = totalAfterTax + tips;
-				break;
-			default:
-	        	System.out.println("Invalid option.");
-
+			tips = ((totalAfterTax/100)*10);	//Minimum tips
+			System.out.format("Current tip: $%.2f", tips);
+			System.out.println();
+			System.out.println("Would you like to tip more?");
+			System.out.println("Enter 'y' for Yes and 'n' for No: ");
+			
+			char  userInput = sc.next().charAt(0);
+					
+			switch(userInput)
+			{
+				case 'Y':
+					newTips();
+					totalAfterTips = totalAfterTax + tips;	//stores tip
+					tipped = true;
+			        break;
+				case 'y':
+					newTips();
+			      	totalAfterTips = totalAfterTax + tips;
+			      	tipped = true;
+			        break;
+				case 'N':	
+					totalAfterTips = totalAfterTax + tips;
+					tipped = true;
+			        break;
+				case 'n':
+					totalAfterTips = totalAfterTax + tips;
+					tipped = true;
+					break;
+				default:
+		        	System.out.println("\nTipping:\nPlease enter either 'Y' for Yes or 'N' for No.");
+	
+			}
 		}
 	}
 	
@@ -265,7 +280,15 @@ public class BillingSystem {
 	{
 		System.out.println("How much would you like to tip? ");
 		double  newTip = sc.nextDouble();
+		if (newTip < tips)	//check if tip amount is below or equal to minimum
+		{
+			System.out.println("Entered amount lower or equal to minimum, please try the options again.\n");
+			tipping();
+		}
+		else if (newTip >= tips) //check if new tip by user is higher or equal to minimum tips
+		{
 		tips = newTip;
+		}
 	}
 	
 	//displays the 6.75% tip in $
