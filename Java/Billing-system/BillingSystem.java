@@ -57,23 +57,16 @@ public class BillingSystem {
 	private static double totalAfterTax = 0;	//total + tax
 	private static double tips = 0;				//minimum tips or user input tips if higher
 	private static double totalAfterTips = 0; //grandTotal
-//	static String purchaseList[];
+
 	private static ArrayList<Receipt> purchaseList =  new ArrayList<Receipt>();	//Used to store all the ordered items
-//	static int drinksPrice[] = {1, 2, 3};
-	
+
 	private static Scanner sc =  new Scanner(System.in); //because this is used in multiple methods, we will declare here
 
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-//		for (int i = 0; i < 2; i++)
-//		{
+	public void runSystem()
+	{
 		details();	//Ask user details
 		menu();		//Display the menu
-//		userChoice();
-//		System.out.println(serialNum);
-//		System.out.println(quantity);
+
 		addItems();	//ask user for choice and save those choices
 		itemsPurchased();	//display what is on the purchase list
 		addTax();			//add the 6.75% tax
@@ -84,9 +77,7 @@ public class BillingSystem {
 		displayTax();
 		displayTips();		//displays the tip given
 		grandTotal();		//displays grandtotal
-//		}
 	}
-	
 	
 	private static void details()
 	{
@@ -303,5 +294,20 @@ public class BillingSystem {
 		System.out.format("Grand Total: $%.2f", totalAfterTips);
 	}
 	
+
+}
+
+
+
+
+public class BillingSystem {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		InternalSystem is = new InternalSystem();
+		is.runSystem();
+	}
 
 }
