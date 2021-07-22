@@ -47,8 +47,8 @@ class Receipt
 	}
 }
 
-public class BillingSystem {
-	
+class InternalSystem
+{
 	//Declaration
 	private static int serialNum = 0;	//the item's serial number
 	private static int quantity = 0;	//How many of said item the user wants to purchase
