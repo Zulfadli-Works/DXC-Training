@@ -132,6 +132,7 @@ public class BillingSystem {
 		
 		while (finishShopping == true)
 		{
+			subtotal = 0;	//reset subtotal back to 0 for new items
 			userChoice();
 			switch(serialNum){
 		      case 1:
