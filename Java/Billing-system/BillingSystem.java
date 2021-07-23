@@ -1,4 +1,6 @@
 
+//Billing System Assignment
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -47,8 +49,10 @@ class Receipt
 	}
 }
 
+
 class InternalSystem
 {
+	
 	//Declaration
 	private static int serialNum = 0;	//the item's serial number
 	private static int quantity = 0;	//How many of said item the user wants to purchase
@@ -62,6 +66,7 @@ class InternalSystem
 
 	private static Scanner sc =  new Scanner(System.in); //because this is used in multiple methods, we will declare here
 
+	//Placed all the methods to run in sequence in the runSystem() method.
 	public void runSystem()
 	{
 		details();	//Ask user details
@@ -95,8 +100,8 @@ class InternalSystem
 		System.out.println("01		 Coffee 	        $1");
 		System.out.println("02		 Tea 	                $2");
 		System.out.println("03		 Soda 	                $3");
-		System.out.println("04		 Cake 	                $3");
-		System.out.println("05		 Burger 	        $3");
+		System.out.println("04		 Cake 	                $4");
+		System.out.println("05		 Burger 	        $5");
 		System.out.println();
 		
 	}
@@ -110,7 +115,7 @@ class InternalSystem
 		{
 			System.out.println("Enter quantity of item: ");
 			quantity = sc.nextInt();
-			if (quantity == 0)
+			if (quantity == 0) //if quantity is 0, it will ask user to redo their choice
 			{
 				System.out.println("You have given 0 quantity for the item, please redo your choice.");
 				userChoice();
@@ -162,7 +167,7 @@ class InternalSystem
 //		    	  name = "Complete";
 //		    	  quantity = 0;
 //		    	  subtotal = 0;
-		    	  finishShopping = false;
+		    	  finishShopping = false; //stops the addItems while loop
 		    	break;
 	
 		      default:
