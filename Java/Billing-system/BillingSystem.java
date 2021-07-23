@@ -111,8 +111,8 @@ class InternalSystem
 	{
 		System.out.println("Select the item's S/N of your choice, enter '0' to finish ordering: ");
 		serialNum = sc.nextInt();
-		if(serialNum != 0)
-		{
+//		if(serialNum != 0)
+//		{
 			System.out.println("Enter quantity of item: ");
 			quantity = sc.nextInt();
 			if (quantity == 0) //if quantity is 0, it will ask user to redo their choice
@@ -120,7 +120,7 @@ class InternalSystem
 				System.out.println("You have given 0 quantity for the item, please redo your choice.");
 				userChoice();
 			}
-		}
+//		}
 	}
 	
 	//compares the user input with the menu and add those items into purchase list
@@ -171,7 +171,7 @@ class InternalSystem
 		    	break;
 	
 		      default:
-		        System.out.println("Please enter a number betwen 0 to 5: \n");
+		        System.out.println("Please enter a S/N betwen 0 to 5: \n");
 		    }
 			if (finishShopping == true)
 			{
