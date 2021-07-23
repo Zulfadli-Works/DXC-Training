@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids in CSS</title>
+    <style type="text/css">
+        .grid-container{
+            background-color: skyblue;
+            /* ~ms~grid   this is for internet explorer */
+            /* values, grid, inline, inline-grid, inline-block */
+            display: grid;
+            /* the number of auto equals to the number of columns */
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 50px, 100px, 50px;
+
+            /* moves the grid's boxes */
+            /* Values: center, space-evenly, space-around, space-between */
+            justify-content: center;
+            /* align-content: space-around; */
+
+            /* aligns the content inside the boxes */
+            /* align-content: center; */
+            padding: 20px;
+
+            /* gap between the columns */
+            column-gap: 10px;
+            /* gap between the rows */
+            row-gap: 10px;
+
+            
+        }
+
+        .grid-container>div{
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            font-size:17px;
+        }
+        #grid-item1{
+            /* grid-area: 1/1/1/4; */
+
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+
+        #grid-item5{
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        #grid-item6{
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        #grid-item9{
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+
+        #grid-item13{
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            grid-row-start: 7;
+            grid-row-end: 9;
+        }
+
+        #Company-name{
+            font-size: larger;
+            font-weight: bold;
+            font-family: sans-serif;
+            color:lightcoral;
+        }
+
+        a img{
+            /* width: 50%; */
+            width: 80px;
+            height: 85px;
+            /* margin-left: auto;
+            margin-right: auto; */
+            
+        }
+
+        ul{
+            list-style: circle outside url(../Images/small.png);
+        }
+
+        span{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+
+    <div class="grid-container">
+        <div id="grid-item1">
+            <a id="Company-name">Program Academy</a>
+        </div>
+        <div id="grid-item2">
+            Started in 2005, We have delivered taught over <span>100,000</span> students all over the world.
+        </div>
+        <div id="grid-item3">
+            Learn online programming languages such as <span>HTML</span>, <span>CSS</span> and <span>Javascript</span>.
+        </div>
+        <div id="grid-item4">
+            Email for Enquiries:
+            <br>
+            <span>enquire@gmail.com</span>
+        </div>
+        <div id="grid-item5">
+            <ul>
+                <li>
+                    From building websites to analyzing data, the choice is yours. No matter your experience level, you'll be writing real, working code in minutes.
+                </li>
+                <li>
+                    Your code is tested as soon as you submit it, so you always know if you're on the right track.
+                </li>
+                <li>
+                    Apply your learning with real-world projects and learn everything you need to take your career to the next level.
+                </li>
+            </ul>
+        </div>
+        <div id="grid-item6">
+            The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser.
+        </div>
+        <div id="grid-item7">
+            <a><img src="../Images/html.png"></a>
+        </div>
+        <div id="grid-item8">
+            <a><img src="../Images/CSS.png"></a>
+        </div>
+        <div id="grid-item9">
+            Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+        </div>
+        <div id="grid-item10">
+            HTML<br> Fee: $1000
+        </div>
+        <div id="grid-item11">
+            CSS<br> Fee: $1000
+        </div>
+        <div id="grid-item12">
+            Javascript<br> Fee: $1000
+        </div>
+        <div id="grid-item13">
+            <!-- <pre>
+Contact us by:
+Phone number: 65129807
+Email: ProgramAcademy@gmail.com
+            </pre> -->
+
+            <footer>
+                <p>
+                    Contact us by:<br>
+                    <a href="mailto:hege@example.com">
+                        ProgramAcademy@gmail.com
+                    </a>
+                    <br>
+                    <a>
+                        Phone number: 65129807
+                    </a>
+                </p>
+              </footer>
+        </div>
+        <!-- <div id="grid-item12">Item 14</div>
+        <div id="grid-item13">Item 15</div> -->
+    </div>
+</body>
+</html>
