@@ -31,11 +31,11 @@ public class ModelBank extends HttpServlet {
 	private double balance;
 	private double amount;
 	private double newBalance;
-	
-	
 	private int accNo;
+	
 	private int toAccNo;
 	private double toBalance;
+	
 	private String newPwd;
 	
 	

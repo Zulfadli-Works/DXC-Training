@@ -32,6 +32,7 @@ public class LoginBank extends HttpServlet {
 		if (x == 0)
 		{
 			//login unsuccessful
+			resp.sendRedirect("/BankingMVC/login.html");
 		}
 		else
 		{
