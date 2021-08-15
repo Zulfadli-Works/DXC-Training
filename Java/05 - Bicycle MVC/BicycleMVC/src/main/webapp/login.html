@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>LOGIN</title>
+<style>
+body{
+	background-color: skyblue;
+}
+#loginText{
+	border: 5px solid red;
+	display: inline;
+	text-align:center;
+	margin-left: 38%;
+}
+
+.center {
+  margin-left: 30%;
+  /*margin-right: auto;*/
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  
+  border-radius:20px;
+}
+
+</style>
+</head>
+<body>
+<h1 id="loginText">Login Here</h1>
+<hr>
+<form action="LoginBicycle">
+	<table class="center">
+	
+		<tr>
+			<td>Username: </td>
+			<td><input type="text" name="un"></td>
+		</tr>
+		
+		<tr>
+			<td>Password: </td>
+			<td><input type="password" name="pwd"></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><input class="button" type="submit" name="login"></td>
+		</tr>
+	
+	</table>
+</form>
+</body>
+</html>
