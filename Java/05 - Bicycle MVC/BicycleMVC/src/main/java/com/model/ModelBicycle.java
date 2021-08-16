@@ -31,14 +31,7 @@ public class ModelBicycle extends HttpServlet {
 	private String email;
 	private String un;
 	private String pwd;
-	private double balance;
-	private double amount;
-	private double newBalance;
 	private int accNo;
-	
-	private String toEmail;
-	private int toAccNo;
-	private double toBalance;
 	
 	private String newPwd;
 	
@@ -66,27 +59,11 @@ public class ModelBicycle extends HttpServlet {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-	public void setNewBalance(double newBalance) {
-		this.newBalance = newBalance;
-	}
-	public void setToEmail(String toEmail) {
-		this.toEmail = toEmail;
-	}
+
 	public void setAccNo(int accNo) {
 		this.accNo = accNo;
 	}
-	public void setToAccNo(int toAccNo) {
-		this.toAccNo = toAccNo;
-	}
-	public void setToBalance(double toBalance) {
-		this.toBalance = toBalance;
-	}
+
 	public void setNewPwd(String newPwd) {
 		this.newPwd = newPwd;
 	}
@@ -110,26 +87,8 @@ public class ModelBicycle extends HttpServlet {
 	public String getPwd() {
 		return pwd;
 	}
-	public double getBalance() {
-		return balance;
-	}
-	public double getAmount() {
-		return amount;
-	}
-	public double getNewBalance() {
-		return newBalance;
-	}
-	public String getToEmail() {
-		return toEmail;
-	}
 	public int getAccNo() {
 		return accNo;
-	}
-	public int getToAccNo() {
-		return toAccNo;
-	}
-	public double getToBalance() {
-		return toBalance;
 	}
 	public String getNewPwd() {
 		return newPwd;
