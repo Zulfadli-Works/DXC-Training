@@ -58,7 +58,7 @@ Class.forName("com.mysql.jdbc.Driver");
 String url="jdbc:mysql://localhost:3306/bicycle";
 String username="root";
 String password="root";
-String query="select * from cart";
+String query="select * from cart ORDER BY item_id";
 Connection conn=DriverManager.getConnection(url, username, password);
 Statement stmt=conn.createStatement();
 ResultSet rs=stmt.executeQuery(query);
