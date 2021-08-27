@@ -1,0 +1,38 @@
+<div id="body">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class = "nav-item">
+            <a routerLink="books" routerLinkActive="active" class="nav-link h5">Home</a>
+        </li>
+
+        <li class = "nav-item">
+            <a routerLink="books" routerLinkActive="active" class="nav-link">Book list</a>
+        </li>
+
+        <li class = "nav-item">
+            <a routerLink="create-book" routerLinkActive="active" class="nav-link">Create Book</a>
+        </li>
+        <!-- <li class = "nav-item">
+            <a routerLink="book-details" routerLinkActive="active" class="nav-link">Book Details</a>
+        </li> -->
+
+    </ul>
+</nav>
+
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+</div>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <span>All Rights Reserved @ Zul</span>
+    </div>
+</footer>

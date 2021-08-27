@@ -1,0 +1,14 @@
+#body {
+    /* min-height: 400px; */
+    margin-bottom: 55px;
+    clear: both;
+ }
+
+footer{
+    position:fixed;
+    bottom:0px;
+    background-color:blue;
+    width:100%;
+    }
+
+    

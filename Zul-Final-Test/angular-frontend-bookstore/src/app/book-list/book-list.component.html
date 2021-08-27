@@ -1,0 +1,96 @@
+<h2>Book-List</h2>
+
+<!-- <table class="table table-striped" style="width:60%">
+    <thead>
+        <tr>
+            <th>Search for title or author</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+
+                <input type="text" class="form-control" [(ngModel)]="searchInput">
+            </td>
+
+            <td>
+                <button (click)="search()" class = "btn btn-info align-bottom" style="margin-left: 10px">Search</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<table class="table table-striped" style="width:60%">
+    <thead>
+        <tr>
+            <th>Search for title</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="titleInput">
+            </td>
+
+            <td>
+                <button (click)="searchTitle()" class = "btn btn-info align-bottom" style="margin-left: 10px">Search</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped" style="width:60%">
+    <thead>
+        <tr>
+            <th>Search for Author</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="authorInput">
+            </td>
+
+            <td>
+                <button (click)="searchAuthor()" class = "btn btn-info align-bottom" style="margin-left: 10px">Search</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <!-- <th>ID</th> -->
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let book of books">
+            <!-- <td>{{book.id}}</td> -->
+            <td>{{book.isbn}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.authors}}</td>
+            <td>{{book.year}}</td>
+            <td>{{book.price}}</td>
+            <td>
+                <button (click)="updateBook(book.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteBook(book.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click)="bookDetails(book.id)" class = "btn btn-info" style="margin-left: 10px">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,28 @@
+<h3> View Book Details</h3>
+<div *ngIf = "book.title != null">
+    <div>
+        <label> <b> ISBN: </b></label> {{book.isbn}}
+    </div>
+    <div>
+        <label> <b> Title: </b></label> {{book.title}}
+    </div>
+    <div>
+        <label> <b> Authors: </b></label> {{book.authors}}
+    </div>
+    <div>
+        <label> <b> Year: </b></label> {{book.year}}
+    </div>
+    <div>
+        <label> <b> Price: </b></label> {{book.price}}
+    </div>
+
+    <button (click)="updateBook(book.id)" class="btn btn-info">Update</button>
+    <button (click)="deleteBook(book.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+</div>
+
+
+<div  *ngIf = "book.title == null">
+
+    <p class="h2 text-danger">Book does not exist</p>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="col-md-5 offset-md-3">
+    <h3> Create Book </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>ISBN</label>
+    <input type="text" class="form-control" id="isbn" [(ngModel)]="book.isbn" name="isbn">
+        </div>
+    
+        <div class="form-group">
+            <label>Title</label>
+    <input type="text" class="form-control" id="title" [(ngModel)]="book.title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label>Authors</label>
+    <input type="text" class="form-control" id="author" [(ngModel)]="book.authors" name="author">
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+    <input type="text" class="form-control" id="year" [(ngModel)]="book.year" name="year">
+        </div>
+
+        <div class="form-group">
+            <label>Price</label>
+    <input type="text" class="form-control" id="price" [(ngModel)]="book.price" name="price">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    </form>
+    </div>
+
+    <div *ngIf="bookAdded == true" class="text-center">
+        <p class="text-success">Book Added Successfully</p>
+        <p class="text-warning">page will be redirected to home page in 5 seconds</p>
+    </div>
